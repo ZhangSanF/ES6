@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        reduce         汇总        一堆出来一个
+        算总和  [23,55555,37777777] => 37833355
+
+        算平均数  [12,59,99]  =>  56.67
+     -->
+
+     <script>
+         let arr = [12,69,180,8763];
+
+        //tmp第一次是12,后面是算出的中间数
+        //item是每项
+        //index从1开始
+         let result = arr.reduce((tmp,item,index)=>{
+             //算和
+             //return tmp+item;
+
+             //算平均数
+             if(index != arr.length-1){
+                 return tmp+item
+             }else{
+                 return (tmp+item)/arr.length
+             }
+         })
+         console.log(result)
+     </script>
+</body>
+</html>

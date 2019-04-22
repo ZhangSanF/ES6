@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 函数的参数rest -->
+
+    <script>
+        //rest参数
+        function show(a,b,...args){ //...args数组,必须是最后一个参数
+            alert(a);
+            alert(b);
+            alert(args)
+            console.log(args)
+        }
+        //show(12,15,16,25,3,53)
+
+        let arr = [1,2,3];
+        console.log(...arr)
+        
+        //默认参数
+        let fun =(a=4,b=5,c)=>{
+            console.log(a,b,c)
+        }
+        fun(undefined,undefined,12)
+        
+        
+    </script>
+</body>
+</html>

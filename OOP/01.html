@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 面向对象 -->
+
+    <script>
+        //属性
+        function User(name,pass){
+            this.name = name;
+            this.pass = pass;
+        }
+        //方法
+        User.prototype.showName = function(){
+            alert(this.name);
+        }
+        //方法
+        User.prototype.showPass = function(){
+            alert(this.pass);
+        }
+        
+        //继承
+        function VipUser(name,pass,level){
+            User.call(this,name,pass);
+            this.level = level;
+        }
+        VipUser.prototype = new User;
+        VipUser.prototype.constructor = VipUser;
+        VipUser.prototype.showLevel = function(){
+            alert(this.level);
+        }
+
+        var user1 = new VipUser('bule','123445',3);
+        user1.showName();
+        user1.showPass();
+        user1.showLevel();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 解构赋值
+        左右两边结构必须一样
+        右边必须是合法的
+        声明和赋值不能分开(必须在一句话内完成)
+    -->
+
+    <script>
+        let [a,b,c] = [1,2,3];
+        console.log(a,b,c)
+
+        let {d,e,f} = {d:12,e:3,f:24}
+        console.log(d,e,f)
+
+        // let [{g,h},[i,j,k],num,str]= [{g:23,h:45},[2,6,8],6,'sdsf']
+        // console.log(g,h,i,j,k,num,str)
+
+        let [json,arr,num,str]= [{g:23,h:45},[2,6,8],6,'sdsf']
+        console.log(json,arr,num,str)
+    </script>
+</body>
+</html>
