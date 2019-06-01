@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * padStart()用于头部补全
+         * padEnd()用于尾部补全
+         * 第一个参数是字符串补全生效的最大长度，第二个参数是用来补全的字符串
+         */    
+        '00'.padStart(2, 'ab') // '00'
+        '00'.padStart(3, 'ab') // 'a00'
+
+        '00'.padEnd(5, 'ab') // 'xabab'
+        '00'.padEnd(4, 'ab') // 'xaba'
+    </script>
+</body>
+</html>

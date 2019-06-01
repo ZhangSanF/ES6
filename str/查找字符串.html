@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * includes()：返回布尔值，表示是否找到了参数字符串。
+         * startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
+         * endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。
+         * 支持第二个参数
+         */     
+        let s = 'Hello world!';
+        console.log(s.startsWith('Hello'))   // true
+        console.log(s.endsWith('!'))   // true
+        console.log(s.includes('o'))   // true
+         
+        //判断以什么开头的
+        let str = 'https://www.baidu.com';
+        if(str.startsWith('http://')){
+            console.log('http')
+        }else if(str.startsWith('https://')){
+            console.log('https')
+        }else{
+            console.log('其他')
+        }
+
+        //判断以什么结尾的
+        let str1 = '123.jpg';
+        if(str1.endsWith('.txt')){
+            console.log('文本文件')
+        }else if(str1.endsWith('.jpg')){
+            console.log('jpg图片')
+        }else{
+            console.log('其他')
+        }
+    </script>
+</body>
+</html>

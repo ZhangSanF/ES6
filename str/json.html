@@ -7,18 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 
-        JSON对象
-        JSON.stringify
-        JSON.parse
-     -->
-
-     <script>
+    <script>
+        /**
+         * JSON.stringify
+         * JSON.parse
+         */    
          let str = '{"a":12,"b":5,"c":"abc"}'
-         let json = JSON.parse(str)//转换成对象
-         let jsonStr = JSON.stringify(json)
+         let json = JSON.parse(str) // 转换成对象
+         let jsonStr = JSON.stringify(json) // 转换成json字符串
          console.log(json)
          console.log(jsonStr)
-     </script>
+    </script>
 </body>
 </html>
