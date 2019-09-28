@@ -32,6 +32,30 @@
              }
          })
          console.log(result)
+
+         //过滤相同数据(根据code_type来区分)
+        let test = [
+            {code: "1", name: "体彩排列1",code_type: "1"},
+            {code: "2", name: "体彩排列2",code_type: "1"},
+            {code: "3", name: "体彩排列3",code_type: "2"},
+            {code: "4", name: "体彩排列4",code_type: "2"},
+            {code: "5", name: "体彩排列5",code_type: "3"},
+            {code: "6", name: "体彩排列6",code_type: "3"},
+            {code: "7", name: "体彩排列7",code_type: "3"}
+         ]
+        
+        function filterData(test) {
+            let obj = {};
+            let arr = test.reduce(function(item, next) {
+                obj[next.code_type]
+                    ? ""
+                    : (obj[next.code_type] = true && item.push(next));
+                    return item;
+                }, []);
+                console.log(arr)
+                return arr
+         }
+         filterData(test)
      </script>
 </body>
 </html>
